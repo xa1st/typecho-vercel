@@ -24,7 +24,7 @@ Typecho-Vercel
 |PASSWORD|数据库密码|必填，数据库密码|
 |PORT|数据库端口|可选，数据库端口，默认：3306|
 |CHARSET|数据库编码|可选，数据库编码，默认：utf8bm4|
-|TABLE_PREFIX|表前缀|可选，表前缀，默认：typecho_|
+|PREFIX|表前缀|可选，表前缀，默认：typecho_|
 |ENGINE|数据库引擎|可选，数据库引擎，默认：InnoDB|
 
 4. 点击 Deploy，进行部署，平台会自动部署
