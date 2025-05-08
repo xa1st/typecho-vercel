@@ -35,7 +35,7 @@ Typecho-Vercel
 
 7. 这里建议绑定你自己的域名再进行下一步，具体请见下面 [<font color="#f00">绑定域名</font>] 一节
 
-8. 手动访问 [https://你的域名/install.php]()，点击下一步，可以看到数据库的所有信息都填好啦，
+8. 手动访问 ```https://你的域名/install.php```，点击下一步，可以看到数据库的所有信息都填好啦，
 
 9. 再下一步，填写管理员帐号密码和邮箱，再下一步，即可完成安装
 
@@ -102,7 +102,7 @@ Typecho-Vercel
 
 [https://typecho.org](https://typecho.org)
 
-[https://vercel.com](https://vercel.com)]
+[https://vercel.com](https://vercel.com)
 
 ## 许可 | License
 
