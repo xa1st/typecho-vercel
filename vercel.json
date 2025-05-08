@@ -1,0 +1,17 @@
+{
+  "functions": {
+    "api/index.php": {
+      "runtime": "vercel-php@0.7.3",
+      "memory": 1024,
+      "maxDuration": 30,
+      "includeFiles": "usr/themes/**"
+    }
+  },
+  "routes": [{ 
+    "src": "/(.*)", 
+    "dest": "/api/index.php",
+    "headers": {
+      "Cache-Control": "public, max-age=86400, s-maxage=3600" 
+    }
+  }]
+}
