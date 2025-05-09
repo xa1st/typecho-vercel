@@ -4,11 +4,11 @@
       "runtime": "vercel-php@0.7.3",
       "memory": 1024,
       "maxDuration": 30,
-      "includeFiles": "usr/themes/**"
+      "includeFiles": "usr/**"
     }
   },
-  "routes": [{ 
-    "src": "/(.*)", 
-    "dest": "/api/index.php"
-  }]
+  "routes": [
+    {"src": "/action/(.*)", "dest": "/api/index.php", "headers": {"X-Path-Info": "/action/$1"}},
+    { "src": "/(.*)", "dest": "/api/index.php" }
+  ]
 }
