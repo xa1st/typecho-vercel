@@ -1,14 +1,17 @@
 {
-  "functions": {
-    "api/index.php": {
-      "runtime": "vercel-php@0.7.3",
-      "memory": 1024,
-      "maxDuration": 30,
-      "includeFiles": "usr/**"
-    }
-  },
-  "routes": [
-    {"src": "/action/(.*)", "dest": "/api/index.php", "headers": {"X-Path-Info": "/action/$1"}},
-    { "src": "/(.*)", "dest": "/api/index.php" }
-  ]
+    "functions": {
+        "api/index.php": {
+            "runtime": "vercel-php@0.7.3",
+            "memory": 1024,
+            "maxDuration": 30,
+            "includeFiles": "usr/**"
+        }
+    },
+    "routes": [
+        {"src": "/.gitignore|/composer.json|/config.inc.php|/vercel.json", "status": 403, "headers": {"Content-Type": "text/plain"}, "dest": "Forbidden"},
+        {"src": "/favicon.ico|/LICENSE|/LICENSE.txt|/README.md", "dest": "/$1"},
+        {"src": "/usr/(themes|plugins|uploads|static)/(.*)", "dest": "/usr/$1/$2"},
+        {"src": "/action/(.*)", "dest": "/api/index.php", "headers": {"X-Path-Info": "/action/$1"}},
+        {"src": "/(.*)", "dest": "/api/index.php"}
+    ]
 }
